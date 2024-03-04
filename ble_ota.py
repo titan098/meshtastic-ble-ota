@@ -27,7 +27,7 @@ CHARACTERISTIC_OTA_UUID = "62ec0272-3ec5-11eb-b378-0242ac130005"
 TX_SEND_MORE = bytearray.fromhex("00")
 
 
-async def _search_for_esp32(name: str):
+async def _discover_meshtastic_device(name: str):
     log.info(f"Searching for '{name}'...")
     esp32 = None
 
@@ -50,7 +50,7 @@ async def send_ota(name, file_path):
     firmware = []
     done = False
 
-    esp32 = await _search_for_esp32(name)
+    esp32 = await _discover_meshtastic_device(name)
 
     def disconnect_callback(client):
         if not done:
@@ -79,7 +79,6 @@ async def send_ota(name, file_path):
             while chunk := file.read(packet_size):
                 firmware.append(chunk)
 
-        # write the packet size to OTA Data
         log.info(f"Sending packet size: {packet_size}.")
         log.info(f"Total packets to be sent: {len(firmware)}")
 
