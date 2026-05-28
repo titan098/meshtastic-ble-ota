@@ -24,17 +24,17 @@ See: https://github.com/meshtastic/esp32-unified-ota
 
 3. Upload the update firmware to the device
     ```bash
-python3 ./ble_ota.py -f ~/Downloads/firmware-esp32-2.7.24.472b14c/firmware-tbeam-2.7.24.472b14c.bin -n "iDEA_6554"
-[13:08:30] INFO     Searching for 'iDEA_6554'...                                                        ble_ota.py:38
-[13:08:35] INFO     'iDEA_6554' found!                                                                  ble_ota.py:47
-[13:08:36] INFO     Firmware size: 2168928 bytes                                                        ble_ota.py:75
-           INFO     Firmware SHA-256: 88423ff88189980e11b9f6491fd1e6ef2bca2802a8f8f5b1ce8bf214c8f7fe3d  ble_ota.py:76
-           INFO     Sending packet size:                                                                ble_ota.py:77
-           INFO     Total packets to be sent: 4253                                                      ble_ota.py:78
-           INFO     Device version response: OK 0 2.7.24.472b14c 2 v1.0.1                               ble_ota.py:82
-           INFO     Device is erasing flash...                                                          ble_ota.py:88
-[13:08:44] INFO     Device is ready to receive firmware                                                 ble_ota.py:91
-Uploading... ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━  41% 0:05:30 1736/4253
+      python3 ./ble_ota.py -f ~/Downloads/firmware-esp32-2.7.24.472b14c/firmware-tbeam-2.7.24.472b14c.bin -n "iDEA_6554"
+      [13:08:30] INFO     Searching for 'iDEA_6554'...                                                        ble_ota.py:38
+      [13:08:35] INFO     'iDEA_6554' found!                                                                  ble_ota.py:47
+      [13:08:36] INFO     Firmware size: 2168928 bytes                                                        ble_ota.py:75
+                 INFO     Firmware SHA-256: 88423ff88189980e11b9f6491fd1e6ef2bca2802a8f8f5b1ce8bf214c8f7fe3d  ble_ota.py:76
+                 INFO     Sending packet size:                                                                ble_ota.py:77
+                 INFO     Total packets to be sent: 4253                                                      ble_ota.py:78
+                 INFO     Device version response: OK 0 2.7.24.472b14c 2 v1.0.1                               ble_ota.py:82
+                 INFO     Device is erasing flash...                                                          ble_ota.py:88
+      [13:08:44] INFO     Device is ready to receive firmware                                                 ble_ota.py:91
+      Uploading... ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━  41% 0:05:30 1736/4253
     ```
 
 ## Protocol
